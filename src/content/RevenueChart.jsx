@@ -1,98 +1,5 @@
-// import React from "react";
-// import {ChartBg,CardTitle} from "./styles"
-// import {
-//   Chart as ChartJS,
-//   LineElement,
-//   PointElement,
-//   CategoryScale,
-//   LinearScale,
-//   Tooltip,
-// } from "chart.js";
-// import { Line } from "react-chartjs-2";
-
-// ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip);
-
-// const RevenueChart = () => {
-//   const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
-
-//   const data = {
-//     labels,
-//     datasets: [
-//       {
-//         label: "Current Week",
-//         data: [15, 10, 11, 16, 20, 21],
-//         borderColor: "#000",
-//         borderWidth: 4,
-//         tension: 0.5,
-//         pointRadius: 0,
-//         segment: {
-//           borderDash: (ctx) => (ctx.p0.parsed.x >= 3 ? [6, 6] : undefined), // Dotted after Apr
-//         },
-//       },
-//       {
-//         label: "Previous Week",
-//         data: [10, 18, 16, 12, 13, 24],
-//         borderColor: "rgba(100, 149, 237, 0.4)",
-//         borderWidth: 4,
-//         tension: 0.5,
-//         pointRadius: 0,
-//       },
-//     ],
-//   };
-
-//   const options = {
-//     responsive: true,
-//     plugins: {
-//       legend: { display: false },
-//       tooltip: {
-//         callbacks: {
-//           label: (ctx) => `$${ctx.formattedValue}M`,
-//         },
-//       },
-//     },
-//     scales: {
-//       x: {
-//         offset: true,
-//         grid: {
-//           display: false,
-//           drawBorder: true,
-//         },
-//         border: {
-//           display: true,
-//           color: "#000",
-//           width: 2,
-//         },
-//       },
-//       y: {
-//         beginAtZero: true,
-//         min: 0,
-//         max: 30,
-//         ticks: {
-//           stepSize: 10,
-//           callback: (v) => `${v}M`,
-//         },
-//         grid: {
-//           color: "#eee",
-//           drawBorder: false,
-//         },
-//         border: {
-//           display: false,
-//         },
-//       },
-//     },
-//   };
-
-//   return (
-//     <ChartBg id="revenue_chart">
-//       <CardTitle >Revenue</CardTitle>
-//       <Line data={data} options={options}  />
-//     </ChartBg>
-//   );
-// };
-
-// export default RevenueChart;
-
-import React from "react";
+import { ChartBg, CardTitle } from "./styles";
+import { useSelector } from "react-redux";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -117,20 +24,27 @@ ChartJS.register(
 );
 
 const ChartCard = styled.div`
-  background: #f9fbfc;
+  background-color: #f9fbfc;
   border-radius: 16px;
   padding: 20px;
   box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  ${props=>props?.darkMode && `
+    background-color:#282828;
+  `}
+
   canvas {
-    width: 100%;
-    height: 90%;
+    width: 100% !important; 
+    height: 100% !important; 
   }
 `;
 
 const ChartHeader = styled.div`
   display: flex;
+  gap: 15px;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-family: "Inter", sans-serif;
 
   span {
@@ -163,6 +77,8 @@ const ChartHeader = styled.div`
 `;
 
 const RevenueChart = () => {
+    const darkMode = useSelector((state) => state.ui.darkMode);
+
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
@@ -173,8 +89,11 @@ const RevenueChart = () => {
         borderWidth: 3,
         fill: false,
         tension: 0.4,
-        borderDash: [6, 6],
         pointRadius: 0,
+        segment: {
+          borderDash: (ctx) =>
+            ctx.p0DataIndex >= 3 ? [6, 6] : [], // After April (index >=3), dotted
+        },
       },
       {
         label: "Previous Week",
@@ -195,31 +114,22 @@ const RevenueChart = () => {
   };
 
   const options = {
-    responsive: false,
+    responsive: true,
     maintainAspectRatio: false,
     layout: {
-      padding: {
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      },
+      padding: { top: 0, left: 0, right: 0, bottom: 20 },
     },
     plugins: {
       legend: { display: false },
-      tooltip: {
-        mode: "index",
-        intersect: false,
-      },
+      tooltip: { mode: "index", intersect: false },
     },
     scales: {
       x: {
         grid: { display: false },
         ticks: {
-          font: {
-            size: 12,
-          },
+          font: { size: 12 },
           color: "#888",
+          padding: 10
         },
       },
       y: {
@@ -228,9 +138,7 @@ const RevenueChart = () => {
         ticks: {
           stepSize: 10,
           callback: (value) => `${value}M`,
-          font: {
-            size: 12,
-          },
+          font: { size: 12 },
           color: "#888",
         },
         grid: {
@@ -242,9 +150,10 @@ const RevenueChart = () => {
   };
 
   return (
-    <ChartCard>
+    <ChartCard darkMode={darkMode}>
       <ChartHeader>
-        <strong>Revenue</strong>
+        <CardTitle margin={"0px"}>Revenue</CardTitle>
+        <div> | </div>
         <span>
           <span className="dot current" /> Current Week
           <span className="bold"> $58,211</span>
@@ -255,7 +164,7 @@ const RevenueChart = () => {
         </span>
       </ChartHeader>
 
-      <Line data={data} options={options} width={664} height={272} />
+      <Line data={data} options={options} />
     </ChartCard>
   );
 };

@@ -5,12 +5,17 @@ export const MenuContainer = styled.div`
   width: 16%;
   border-right: 1px solid rgba(5, 5, 5, 0.06);
   background: #fff;
+  ${(props) =>
+    props?.darkMode &&
+    `
+  background-color:black;
+  color:white;`}
 `;
 
 export const ProfileSection = styled.div`
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 10px;
   img {
     width: 28px;
     height: 28px;
@@ -38,8 +43,9 @@ export const StyledTabs = styled(Tabs)`
     margin: 0px;
   }
   li {
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+    color:${props=>props?.darkMode ? "white":"black"};
   }
   ul li::marker {
     color: #e6e6e6 !important;
@@ -48,7 +54,11 @@ export const StyledTabs = styled(Tabs)`
 
 export const StyledMenu = styled(Menu)`
   border: none;
-
+  ${(props) =>
+    props?.darkMode &&
+    `
+  background-color:black;
+  color:white;`}
   .ant-menu-item,
   .ant-menu-submenu-title {
     font-size: 15px;
@@ -57,14 +67,24 @@ export const StyledMenu = styled(Menu)`
     align-items: center;
     height: 36px;
   }
-.ant-menu-title-content{
-margin:0px;
-}
+  .ant-menu-title-content {
+    margin: 0px;
+    ${(props) =>
+      props?.darkMode &&
+      `
+  background-color:black;
+  color:white;`}
+  }
   .ant-menu-item-selected {
     background-color: #f3f3f3;
     border-radius: 6px;
     position: relative;
     color: black;
+       ${(props) =>
+      props?.darkMode &&
+      `
+  background-color:black;
+  color:white;`}
   }
 
   .ant-menu-item-selected::before {
@@ -96,13 +116,13 @@ margin:0px;
 `;
 
 export const GroupLabel = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #b9b9b9;
   margin-top: 12px;
 `;
 
 export const TabLabel = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   color: #b9b9b9;
 `;

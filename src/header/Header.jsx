@@ -8,25 +8,36 @@ import SunIcon from "../assets/sunIcon";
 import HistoryIcon from "../assets/historyIcon";
 import NotificationIcon from "../assets/notificationIcon";
 import CommandKeyIcon from "../assets/commandKeyIcon";
+import { useDispatch, useSelector } from "react-redux";
+import { setDarkMode, setActiveTab } from "../Redux/slice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state) => state.ui.darkMode);
+
   return (
     <HeaderContainer id="header_container">
       <Container>
         <MenuIcon />
         <StarIcon />
-        <div>Dashboard</div>
+        <div id="dashboard">Dashboard</div>
         <div>/</div>
         <div>Default</div>
       </Container>
       <Container>
-        <Input prefix={<SearchIcon />} suffix={<CommandKeyIcon/>} placeholder="Search" />
-        <SunIcon />
+        <Input
+          style={{ width: "200px", backgroundColor: "#f3f3f3" }}
+          prefix={<SearchIcon />}
+          suffix={<CommandKeyIcon />}
+          placeholder="Search"
+        />
+        <div style={{ cursor: "pointer" }} onClick={() => dispatch(setDarkMode())}>
+          <SunIcon />
+        </div>
         <HistoryIcon />
         <NotificationIcon />
-        <div>
-          <MenuIcon />
-        </div>
+
+        <MenuIcon />
       </Container>
     </HeaderContainer>
   );

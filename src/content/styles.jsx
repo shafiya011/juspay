@@ -21,12 +21,13 @@ export const TrendCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  color:black;
   background-color: ${(props) => props?.color};
 `;
 export const CardTitle = styled.div`
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: ${props=>props?.margin || "20px"};
 `;
 export const Value = styled.div`
   font-size: 28px;
@@ -61,15 +62,18 @@ export const TrendWrapper = styled.div`
   height: 253px;
 `;
 export const ChartBg = styled.div`
-  background-color: #f7f9fb; 
+  background-color: ${props=>props?.darkMode ? "#282828" :"#f7f9fb"}; 
   padding: 20px;
   border-radius: 15px;
   height: ${(props) => props?.height};
+ 
   canvas {
     width: 90% !important;
     height: 85% !important;
     margin: auto;
+    
   }
+  
 `;
 
 export const TableWrapper = styled.div`
@@ -92,6 +96,7 @@ export const Th = styled.th`
   color: #6b7280;
   font-weight: 500;
   border-bottom: 1px solid #e5e7eb;
+  color: ${props=>props?.darkMode ? "#282828" : "#f7f9fb"} ;
 `;
 
 export const Td = styled.td`
@@ -106,7 +111,7 @@ export const RevenueWrapper = styled.div`
   gap: 30px 30px;
   margin-top: 30px;
   div {
-    background-color: #f7f9fb;
+    background-color: ${props=>props?.darkMode ? "#282828" : "#f7f9fb"} ;
     border-radius: 15px;
   }
 `;
@@ -131,14 +136,14 @@ export const StatusTag = styled.div`
 `;
 export const FilterSec = styled.div`
   padding: 15px;
-  background-color: #f7f9fb;
+  background-color:${props=>props?.darkMode ?  "#282828" : "#f7f9fb"};
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   div {
     display: flex;
-    gap: 10px;
+    gap: 20px;
   }
 `;
 export const AntdInput = styled(Input)`
@@ -162,3 +167,6 @@ export const StatusWrapper = styled.div`
   align-items: center;
   gap: 10px;
 `;
+export const OrderListContainer =styled.div`
+  padding:30px;
+`

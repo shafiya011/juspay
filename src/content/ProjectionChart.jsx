@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import {ChartBg,CardTitle} from "./styles"
 import { Bar } from "react-chartjs-2";
 import {
@@ -13,6 +14,7 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const ProjectionsChart = () => {
+    const darkMode = useSelector((state) => state.ui.darkMode);
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
@@ -81,7 +83,7 @@ const ProjectionsChart = () => {
   };
 
   return (
-    <ChartBg id='projection_chart' height="255px" projection={true}>
+    <ChartBg id='projection_chart' height="255px" projection={true} darkMode={darkMode}>
       <CardTitle>Projections vs Actuals</CardTitle>
       <Bar data={data} options={options} />
     </ChartBg>

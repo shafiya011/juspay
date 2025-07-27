@@ -13,7 +13,7 @@ export const RightContainer = styled.div`
 export const Heading = styled.div`
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: ${props=>props?.darkMode ? "white" :"#333"};
   margin-bottom: 12px;
 `;
 
@@ -58,7 +58,7 @@ export const TimeText = styled.div`
 
 export const ContactItem = styled.div`
   font-size: 14px;
-  color: #111;
+  color: ${props=>props?.darkMode ? "white" : "#111"};
 `;
 export const ContentWrapper= styled.div`
 width:85%;`

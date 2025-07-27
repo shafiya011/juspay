@@ -1,9 +1,11 @@
-
+import { useSelector } from "react-redux";
 import {Products} from "../mockData"
 import {TableWrapper,ProductTitle,Table,Th,Td,ChartBg} from './styles'
 const TopSellingProductsTable = () => {
+    const darkMode = useSelector((state) => state.ui.darkMode);
+
   return (
-    <ChartBg>
+    <ChartBg darkMode={darkMode}>
     <TableWrapper>
       <ProductTitle>Top Selling Products</ProductTitle>
       <Table>

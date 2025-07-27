@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setDarkMode, setActiveTab } from "../Redux/slice";
 import {
   MenuContainer,
   TabLabel,
@@ -20,7 +22,9 @@ import {
 } from "@ant-design/icons";
 
 const SideMenu = () => {
+    const dispatch = useDispatch();
   const [selectedKey, setSelectedKey] = useState("default");
+    const darkMode = useSelector((state) => state.ui.darkMode);
 
   const menuItems = [
     {
@@ -32,7 +36,7 @@ const SideMenu = () => {
           key: "ecommerce",
           icon: <ShoppingOutlined />,
           label: "eCommerce",
-          children: [{ key: "", label: "" }],
+          children: [{ key: "orders", label: "Order List" }],
         },
         {
           key: "projects",
@@ -105,21 +109,27 @@ const SideMenu = () => {
     },
     { key: "2", label: <TabLabel>Recently</TabLabel> },
   ];
-
+  const handleMenuClick=(e)=>{
+    setSelectedKey(e.key)
+    if(e.key==="orders"){
+      dispatch(setActiveTab("orders"))
+    }else dispatch(setActiveTab(e.key))
+  }
   return (
-    <MenuContainer>
+    <MenuContainer darkMode={darkMode}>
       <ProfileSection>
         <img src="https://i.pravatar.cc/150?img=4" alt="avatar" />
         <span>ByeWind</span>
       </ProfileSection>
 
-      <StyledTabs defaultActiveKey="1" items={tabs} id="munu-tab" />
+      <StyledTabs defaultActiveKey="1" items={tabs} id="munu-tab" darkMode={darkMode}/>
 
       <StyledMenu
         mode="inline"
         items={menuItems}
         selectedKeys={[selectedKey]}
-        onClick={(e) => setSelectedKey(e.key)}
+        onClick={(e) => handleMenuClick(e)}
+        darkMode={darkMode}
       />
     </MenuContainer>
   );

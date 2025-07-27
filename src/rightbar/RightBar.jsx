@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Data } from "../mockData";
 import {
   RightContainer,
@@ -12,6 +13,7 @@ import {
 import { Flex,IconContainer } from "../styles";
 
 const RightBar = () => {
+  const darkMode = useSelector((state) => state.ui.darkMode);
 
   const grouped = Data.reduce((acc, curr) => {
     const key = curr.heading;
@@ -23,15 +25,15 @@ const RightBar = () => {
     <RightContainer>
       {["Notifications", "Activities", "Contacts"].map((section) => (
         <div key={section}>
-          <Heading>{section}</Heading>
+          <Heading darkMode={darkMode}>{section}</Heading>
           <SectionContainer>
             {grouped[section]?.map((item, idx) =>
               section === "Contacts" ? (
-                <Flex alignItems="center">
+                <Flex alignItems="center" justifycontent="flex-start">
                   <IconContainer>
                     <img src={item?.image} />
                   </IconContainer>
-                  <ContactItem key={idx}>{item.content}</ContactItem>
+                  <ContactItem key={idx} darkMode={darkMode}>{item.content}</ContactItem>
                 </Flex>
               ) : (
                 <Flex key={idx}>
