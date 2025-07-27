@@ -22,8 +22,8 @@ const Trends = () => {
           <TrendCard key={key} color={data?.bg_color}>
             <CardTitle>{data?.title}</CardTitle>
             <Flex justifycontent="space-between" >
-              <Value >{data?.score}</Value>
-              <TrendValue >{data?.trend}{Trend}</TrendValue>
+              <Value className="value">{data?.score}</Value>
+              <TrendValue className="trendvalue">{data?.trend}{Trend}</TrendValue>
             </Flex>
           </TrendCard>
         );

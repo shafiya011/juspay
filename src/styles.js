@@ -14,13 +14,28 @@ export const Flex = styled.div`
     margin: ${(props) => props.margin};
   align-items: ${(props) => props.alignItems || "center"};
   justify-content: ${(props) => props.justifycontent || "center"};
-  ${(props) =>
-    props?.trendHover &&
-    `
-&:hover{
-flex-direction: row-reverse;
-background-color:#f0f1f3;}`}
+
+  &:hover {
+    flex-direction: row-reverse; 
+  }
+
+
+  &:hover .value {
+    font-size: 14px;
+    font-weight:400;
+  }
+
+  &:hover .trendvalue {
+    font-size: 28px;
+    font-weight:600;
+   >svg{
+    height: 28px;
+    width:600;
+    }
+  }
 `;
+
+
 export const IconContainer = styled.div`
   width: 28px;
   height: 28px;
