@@ -135,6 +135,7 @@ const OrderList = () => {
 
       <Table
         style={{ fontSize: "14px" }}
+        rowKey={(record, index) => record.id + "-" + index}
         columns={columns}
         dataSource={filteredOrders}
         pagination={{ pageSize: 8 }}
