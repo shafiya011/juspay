@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "antd";
 import SearchIcon from "../assets/searchIcon";
-import { HeaderContainer, LeftContainer } from "./styles";
+import { HeaderContainer, Container } from "./styles";
 import MenuIcon from "../assets/menuIcon";
 import StarIcon from "../assets/starIcon";
 import SunIcon from "../assets/sunIcon";
@@ -12,14 +12,14 @@ import CommandKeyIcon from "../assets/commandKeyIcon";
 const Header = () => {
   return (
     <HeaderContainer id="header_container">
-      <LeftContainer>
+      <Container>
         <MenuIcon />
         <StarIcon />
         <div>Dashboard</div>
         <div>/</div>
         <div>Default</div>
-      </LeftContainer>
-      <LeftContainer>
+      </Container>
+      <Container>
         <Input prefix={<SearchIcon />} suffix={<CommandKeyIcon/>} placeholder="Search" />
         <SunIcon />
         <HistoryIcon />
@@ -27,7 +27,7 @@ const Header = () => {
         <div>
           <MenuIcon />
         </div>
-      </LeftContainer>
+      </Container>
     </HeaderContainer>
   );
 };

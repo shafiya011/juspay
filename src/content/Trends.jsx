@@ -6,7 +6,6 @@ import UpgradeTrend from "../assets/upgradeTrend";
 import DowngradeTrend from "../assets/downgradeTrend";
 
 const Trends = () => {
-    // const[hover, setHover]= useState(false)
   const trendDirection = (value) => {
     if (value < 0) {
       return <DowngradeTrend />;

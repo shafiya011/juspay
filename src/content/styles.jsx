@@ -2,7 +2,6 @@ import { Input } from "antd";
 import { styled } from "styled-components";
 export const Container = styled.div`
   width: 100%;
-  /* padding:20px 28px; */
 `;
 export const InsightsWrapper = styled.div`
   padding: 30px;
@@ -13,7 +12,6 @@ export const Title = styled.div`
   font-weight: 600;
 `;
 export const Insights = styled.div`
-  /* display: flex; */
   gap: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -24,7 +22,6 @@ export const TrendCard = styled.div`
   flex-direction: column;
   padding: 20px;
   background-color: ${(props) => props?.color};
-  /* gap: 15px; */
 `;
 export const CardTitle = styled.div`
   font-size: 15px;
@@ -64,7 +61,7 @@ export const TrendWrapper = styled.div`
   height: 253px;
 `;
 export const ChartBg = styled.div`
-  background-color: #f7f9fb; //#f3f4f5;
+  background-color: #f7f9fb; 
   padding: 20px;
   border-radius: 15px;
   height: ${(props) => props?.height};
@@ -74,7 +71,6 @@ export const ChartBg = styled.div`
     margin: auto;
   }
 `;
-// topselling product
 
 export const TableWrapper = styled.div`
   flex: 2;

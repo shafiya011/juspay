@@ -1,13 +1,11 @@
 import React from "react";
 import { Flex } from "../styles";
 import { ChartBg, CardTitle } from "./styles";
-// import WorldMap from "../assets/World_Map_Blank.svg.png"
 import WorldMap from "../assets/world-map-replica.png";
 import { Progress } from "antd";
 import { RevenueLocation } from "../mockData";
 
 const RevenueByLoc = () => {
-  console.log(RevenueLocation);
 
   return (
     <ChartBg>

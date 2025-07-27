@@ -19,9 +19,8 @@ const statusColors = {
 const OrderList = () => {
   const [searchValue, setSearchValue] = useState("");
   const [hoveredRowId, setHoveredRowId] = useState(null);
-  const [sortOrder, setSortOrder] = useState(null); // "newest" | "oldest" | null
+  const [sortOrder, setSortOrder] = useState(null);
 
-  // ✅ 1. Filter Orders
   const filteredOrders = Orders.filter((order) => {
     const search = searchValue.toLowerCase();
     return (
@@ -30,21 +29,20 @@ const OrderList = () => {
     );
   });
 
-  // ✅ 2. Sort Orders by Date
+
   const sortedOrders = [...filteredOrders].sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
 
     if (sortOrder === "newest") {
-      return dateB - dateA; // descending → newest first
+      return dateB - dateA; 
     } else if (sortOrder === "oldest") {
-      return dateA - dateB; // ascending → oldest first
+      return dateA - dateB; 
     }
     return 0;
   });
-  console.log(sortedOrders);
 
-  // ✅ Columns
+
   const columns = [
     {
       title: "Order ID",
@@ -96,7 +94,6 @@ const OrderList = () => {
     },
   ];
 
-  // ✅ Menu for Sort Button
   const sortMenu = (
     <Menu
       onClick={(e) => setSortOrder(e.key)}

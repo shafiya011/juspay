@@ -7,9 +7,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 `
-export const RightContainer=styled.div`
-`
-export const LeftContainer = styled.div`
+export const Container = styled.div`
 gap:20px;
 display:flex;
 align-items:center;

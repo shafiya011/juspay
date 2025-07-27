@@ -23,7 +23,7 @@
 //         data: [15, 10, 11, 16, 20, 21],
 //         borderColor: "#000",
 //         borderWidth: 4,
-//         tension: 0.5, 
+//         tension: 0.5,
 //         pointRadius: 0,
 //         segment: {
 //           borderDash: (ctx) => (ctx.p0.parsed.x >= 3 ? [6, 6] : undefined), // Dotted after Apr
@@ -34,7 +34,7 @@
 //         data: [10, 18, 16, 12, 13, 24],
 //         borderColor: "rgba(100, 149, 237, 0.4)",
 //         borderWidth: 4,
-//         tension: 0.5, 
+//         tension: 0.5,
 //         pointRadius: 0,
 //       },
 //     ],
@@ -92,11 +92,6 @@
 
 // export default RevenueChart;
 
-
-
-
-
-
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -126,9 +121,9 @@ const ChartCard = styled.div`
   border-radius: 16px;
   padding: 20px;
   box-sizing: border-box;
-  canvas{
-    width:100%;
-    height:90%;
+  canvas {
+    width: 100%;
+    height: 90%;
   }
 `;
 
@@ -259,9 +254,8 @@ const RevenueChart = () => {
           <span className="bold"> $68,768</span>
         </span>
       </ChartHeader>
-      {/* <div > */}
-        <Line data={data} options={options} width={664} height={272} />
-      {/* </div> */}
+
+      <Line data={data} options={options} width={664} height={272} />
     </ChartCard>
   );
 };

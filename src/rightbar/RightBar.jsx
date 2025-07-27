@@ -12,7 +12,6 @@ import {
 import { Flex,IconContainer } from "../styles";
 
 const RightBar = () => {
-  // Group data by heading
 
   const grouped = Data.reduce((acc, curr) => {
     const key = curr.heading;
