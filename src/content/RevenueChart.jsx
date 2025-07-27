@@ -122,11 +122,14 @@ ChartJS.register(
 );
 
 const ChartCard = styled.div`
-  height: 320px;
   background: #f9fbfc;
   border-radius: 16px;
   padding: 20px;
   box-sizing: border-box;
+  canvas{
+    width:100%;
+    height:90%;
+  }
 `;
 
 const ChartHeader = styled.div`

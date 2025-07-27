@@ -1,7 +1,16 @@
 import {styled} from "styled-components"
 export const HeaderContainer = styled.div`
-/* width:65%; */
-/* padding:20px 28px; */
 height:68px;
+padding:20px 30px;
 border:1px solid grey;
+display:flex;
+justify-content:space-between;
+align-items:center;
+`
+export const RightContainer=styled.div`
+`
+export const LeftContainer = styled.div`
+gap:20px;
+display:flex;
+align-items:center;
 `

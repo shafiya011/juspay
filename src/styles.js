@@ -16,3 +16,22 @@ export const Flex = styled.div`
 flex-direction: row-reverse;
 background-color:#f0f1f3;}`}
 `;
+export const IconContainer = styled.div`
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: ${props=>props?.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+  }
+`;

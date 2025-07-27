@@ -18,15 +18,14 @@ export const Heading = styled.div`
 `;
 
 export const IconContainer = styled.div`
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   border-radius: 8px;
   background-color: ${props=>props?.color};
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  padding:5px;
   svg {
     width: 20px;
     height: 20px;

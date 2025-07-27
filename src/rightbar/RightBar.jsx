@@ -3,14 +3,13 @@ import { Data } from "../mockData";
 import {
   RightContainer,
   Heading,
-  IconContainer,
   SectionContainer,
   TextContent,
   TimeText,
   ContactItem,
   ContentWrapper,
 } from "./styles";
-import { Flex } from "../styles";
+import { Flex,IconContainer } from "../styles";
 
 const RightBar = () => {
   // Group data by heading
@@ -29,7 +28,7 @@ const RightBar = () => {
           <SectionContainer>
             {grouped[section]?.map((item, idx) =>
               section === "Contacts" ? (
-                <Flex allignItems="center">
+                <Flex alignItems="center">
                   <IconContainer>
                     <img src={item?.image} />
                   </IconContainer>

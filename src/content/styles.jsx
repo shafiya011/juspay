@@ -1,6 +1,7 @@
+import { Input } from "antd";
 import { styled } from "styled-components";
 export const Container = styled.div`
-  width: 65%;
+  width: 100%;
   /* padding:20px 28px; */
 `;
 export const InsightsWrapper = styled.div`
@@ -33,7 +34,9 @@ export const CardTitle = styled.div`
 export const Value = styled.div`
   font-size: 28px;
   font-weight: 600;
-${props=>props?.hover && `
+  ${(props) =>
+    props?.hover &&
+    `
     font-size:14px;
 `}
 `;
@@ -46,7 +49,9 @@ export const TrendValue = styled.div`
     height: 12px;
     width: 12px;
   }
-  ${props=>props?.hover && `
+  ${(props) =>
+    props?.hover &&
+    `
     font-size:28px;
 `}
 `;
@@ -57,13 +62,17 @@ export const TrendWrapper = styled.div`
   gap: 30px;
   flex: 1;
   height: 253px;
-  
 `;
 export const ChartBg = styled.div`
-  background-color: #f3f4f5;
+  background-color: #f7f9fb; //#f3f4f5;
   padding: 20px;
   border-radius: 15px;
   height: ${(props) => props?.height};
+  canvas {
+    width: 90% !important;
+    height: 85% !important;
+    margin: auto;
+  }
 `;
 // topselling product
 
@@ -101,7 +110,7 @@ export const RevenueWrapper = styled.div`
   gap: 30px 30px;
   margin-top: 30px;
   div {
-    background-color: #f3f4f5;
+    background-color: #f7f9fb;
     border-radius: 15px;
   }
 `;
@@ -119,4 +128,41 @@ export const LegendItem = styled.div`
     border-radius: 50%;
     margin-right: 8px;
   }
+`;
+
+export const StatusTag = styled.div`
+  color: ${(props) => props?.color};
+`;
+export const FilterSec = styled.div`
+  padding: 15px;
+  background-color: #f7f9fb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  div {
+    display: flex;
+    gap: 10px;
+  }
+`;
+export const AntdInput = styled(Input)`
+  width: 180px;
+  border-radius: 8px;
+  background-color: #fafbfd;
+  ::placeholder {
+    font-size: 14px;
+  }
+`;
+export const Dot = styled.div`
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: ${(props) => props?.color};
+  display: inline-block;
+`;
+export const StatusWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 `;

@@ -14,13 +14,13 @@ export const Data = [
     time: "59 minutes ago",
     content: "New user regstered",
     image: <User />,
-      color: "#e5ecf6",
+    color: "#e5ecf6",
   },
   {
     heading: "Notifications",
     time: "12 hours ago",
     content: "You have  abug that needs to be fixed",
-    image:  <BugIcon />,
+    image: <BugIcon />,
     color: "#e3f5ff",
   },
   {
@@ -34,95 +34,106 @@ export const Data = [
     heading: "Activities",
     time: "Just now",
     content: "You have  abug that needs to be fixed",
-    image: "https://plus.unsplash.com/premium_photo-1739178656495-8109a8bc4f53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHx1c2VyfGVufDB8fDB8fHww",
+    image:
+      "https://plus.unsplash.com/premium_photo-1739178656495-8109a8bc4f53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHx1c2VyfGVufDB8fDB8fHww",
   },
   {
     heading: "Activities",
     time: "59 minutes ago",
     content: "Released a new version",
-    image: "https://plus.unsplash.com/premium_photo-1664461663120-b39152ba92ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664461663120-b39152ba92ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
   },
   {
     heading: "Activities",
     time: "12 hours ago",
     content: "Submitted a bug",
-    image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    image:
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
   },
   {
     heading: "Activities",
     time: "Today, 11.59 AM",
     content: "Modified a data in Page X",
-    image: "https://images.unsplash.com/photo-1672863601285-253fc82db868?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    image:
+      "https://images.unsplash.com/photo-1672863601285-253fc82db868?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
   },
   {
     heading: "Activities",
     time: "Feb 2, 2023",
     content: "Deleted a page in project X",
-    image: "https://images.unsplash.com/photo-1563237023-b1e970526dcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    image:
+      "https://images.unsplash.com/photo-1563237023-b1e970526dcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
   },
   {
     heading: "Contacts",
     content: "Natali Craig",
-    image: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     heading: "Contacts",
     content: "Drew Cano",
-    image: "https://plus.unsplash.com/premium_photo-1669882305273-674eff6567af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1669882305273-674eff6567af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     heading: "Contacts",
     content: "Orlando Diggs",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    image:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
   },
 
   {
     heading: "Contacts",
     content: "Andi Lane",
-    image: "https://media.istockphoto.com/id/1359985418/photo/anime-woman-in-a-red-suit-with-short-hair-cut-black-hair-the-killer-girl-in-the-red-jacket.webp?a=1&b=1&s=612x612&w=0&k=20&c=zmE1cV-6HwYik4ksb1ssvt3K3ttvRAZNBZwujXJrow4=",
+    image:
+      "https://media.istockphoto.com/id/1359985418/photo/anime-woman-in-a-red-suit-with-short-hair-cut-black-hair-the-killer-girl-in-the-red-jacket.webp?a=1&b=1&s=612x612&w=0&k=20&c=zmE1cV-6HwYik4ksb1ssvt3K3ttvRAZNBZwujXJrow4=",
   },
   {
     heading: "Contacts",
     content: "Kate Morrison",
-    image: "https://images.unsplash.com/photo-1703115353918-5a305e7cdbb9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1703115353918-5a305e7cdbb9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     heading: "Contacts",
     content: "Koray Okumus",
-    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
 export const TrendsData = [
   {
-    key:1,
-    title:"Coustomers",
-    score:"3,781",
+    key: 1,
+    title: "Coustomers",
+    score: "3,781",
     trend: "+11.01%",
-    bg_color:'#e3f5ff'
+    bg_color: "#e3f5ff",
   },
-    {
-    key:2,
-    title:"Orders",
-    score:"1,219",
-    trend:"-0.03%",
-     bg_color:'#f3f4f5'
+  {
+    key: 2,
+    title: "Orders",
+    score: "1,219",
+    trend: "-0.03%",
+    bg_color: "#f3f4f5",
   },
-    {
-    key:3,
-    title:"Revenue",
-    score:"$695",
-    trend:"+15.03%",
-     bg_color:'#f3f4f5'
+  {
+    key: 3,
+    title: "Revenue",
+    score: "$695",
+    trend: "+15.03%",
+    bg_color: "#f3f4f5",
   },
-    {
-    key:4,
-    title:"Growth",
-    score:"30.1%",
-    trend:"+6.08%",
-     bg_color:'#e5ecf6'
-  }
-]
+  {
+    key: 4,
+    title: "Growth",
+    score: "30.1%",
+    trend: "+6.08%",
+    bg_color: "#e5ecf6",
+  },
+];
 export const Products = [
   {
     name: "ASOS Ridley High Waist",
@@ -321,4 +332,11 @@ export const Orders = [
     date: "Feb 2, 2023",
     status: "Rejected",
   },
+];
+
+export const RevenueLocation = [
+  { location: "NewYork", revenue: "72" },
+  { location: "San Fracisco", revenue: "39" },
+  { location: "Sydney", revenue: "25" },
+  { location: "Singapore", revenue: "61" },
 ];
