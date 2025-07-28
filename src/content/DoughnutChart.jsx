@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Chart, ArcElement, Tooltip } from "chart.js";
+import { Chart, ArcElement, Tooltip,DoughnutController } from "chart.js";
 import { ChartBg, CardTitle, Dot } from "./styles";
 import { Flex } from "../styles";
 import { Badge } from "antd";
-Chart.register(ArcElement, Tooltip);
+Chart.register(ArcElement, Tooltip, DoughnutController);
 
 const SalesDoughnutChart = () => {
    const darkMode = useSelector((state) => state.ui.darkMode);
