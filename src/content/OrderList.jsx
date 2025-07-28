@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Table, Avatar, Space, Button, Dropdown, Menu } from "antd";
+import { Table, Avatar, Space} from "antd";
 import {
   StatusTag,
   FilterSec,
@@ -9,6 +9,7 @@ import {
   StatusWrapper,
   Title,
   OrderListContainer,
+  StyledTable
 } from "./styles";
 import { Orders } from "../mockData";
 import { CalendarOutlined, EllipsisOutlined } from "@ant-design/icons";
@@ -118,23 +119,25 @@ const OrderList = () => {
       <Title>Order List</Title>
       <FilterSec darkMode={darkMode}>
         <div>
-          <AddIcon />
-          <FillterIcon />
+          <AddIcon darkMode={darkMode} />
+          <FillterIcon darkMode={darkMode}/>
           {/* <Dropdown overlay={sortMenu} trigger={["click"]}>
             <Button icon={<SortIcon />}></Button>
           </Dropdown> */}
-          <SortIcon />
+          <SortIcon darkMode={darkMode}/>
         </div>
         <AntdInput
           allowClear
           prefix={<SearchIcon />}
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
+           darkMode={darkMode}
         />
       </FilterSec>
 
-      <Table
+      <StyledTable
         style={{ fontSize: "14px" }}
+         darkMode={darkMode}
         rowKey={(record, index) => record.id + "-" + index}
         columns={columns}
         dataSource={filteredOrders}

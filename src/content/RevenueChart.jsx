@@ -29,7 +29,7 @@ const ChartCard = styled.div`
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
-  height: 310px;
+  height: 325px;
   ${props=>props?.darkMode && `
     background-color:#282828;
   `}

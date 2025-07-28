@@ -1,4 +1,4 @@
-import { Input } from "antd";
+import { Input, Table as AntdTable } from "antd";
 import { styled } from "styled-components";
 export const Container = styled.div`
   width: 100%;
@@ -21,13 +21,13 @@ export const TrendCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  color:black;
+  color: black;
   background-color: ${(props) => props?.color};
 `;
 export const CardTitle = styled.div`
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: ${props=>props?.margin || "20px"};
+  margin-bottom: ${(props) => props?.margin || "20px"};
 `;
 export const Value = styled.div`
   font-size: 28px;
@@ -62,18 +62,16 @@ export const TrendWrapper = styled.div`
   height: 253px;
 `;
 export const ChartBg = styled.div`
-  background-color: ${props=>props?.darkMode ? "#282828" :"#f7f9fb"}; 
+  background-color: ${(props) => (props?.darkMode ? "#282828" : "#f7f9fb")};
   padding: 20px;
   border-radius: 15px;
   height: ${(props) => props?.height};
- 
+
   canvas {
     width: 90% !important;
     height: 85% !important;
     margin: auto;
-    
   }
-  
 `;
 
 export const TableWrapper = styled.div`
@@ -88,7 +86,7 @@ export const ProductTitle = styled.div`
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  font-size:13px;
+  font-size: 13px;
 `;
 
 export const Th = styled.th`
@@ -97,7 +95,7 @@ export const Th = styled.th`
   color: #6b7280;
   font-weight: 500;
   border-bottom: 1px solid #e5e7eb;
-  color: ${props=>props?.darkMode ?  "#f7f9fb":"#282828" } ;
+  color: ${(props) => (props?.darkMode ? "#f7f9fb" : "#282828")};
 `;
 
 export const Td = styled.td`
@@ -112,7 +110,7 @@ export const RevenueWrapper = styled.div`
   gap: 30px 30px;
   margin-top: 30px;
   div {
-    background-color: ${props=>props?.darkMode ? "#282828" : "#f7f9fb"} ;
+    background-color: ${(props) => (props?.darkMode ? "#282828" : "#f7f9fb")};
     border-radius: 15px;
   }
 `;
@@ -137,7 +135,8 @@ export const StatusTag = styled.div`
 `;
 export const FilterSec = styled.div`
   padding: 15px;
-  background-color:${props=>props?.darkMode ?  "#282828" : "#f7f9fb"};
+  border-radius: 8px;
+  background-color: ${(props) => (props?.darkMode ? "#282828" : "#f7f9fb")};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,9 +149,13 @@ export const FilterSec = styled.div`
 export const AntdInput = styled(Input)`
   width: 180px;
   border-radius: 8px;
-  background-color: #fafbfd;
+  background-color: ${(props) => (props.darkMode ? "#2a2a2a" : "#fafbfd")};
+  color: ${(props) => (props.darkMode ? "#fff" : "#000")};
+  border: 1px solid ${(props) => (props.darkMode ? "#444" : "#d9d9d9")};
+
   ::placeholder {
     font-size: 14px;
+    color: ${(props) => (props.darkMode ? "#aaa" : "#999")};
   }
 `;
 export const Dot = styled.div`
@@ -168,29 +171,72 @@ export const StatusWrapper = styled.div`
   align-items: center;
   gap: 10px;
 `;
-export const OrderListContainer =styled.div`
-  padding:30px;
-`
-export const TrendFlex=styled.div`
-  display:flex;
+export const OrderListContainer = styled.div`
+  padding: 30px;
+`;
+export const TrendFlex = styled.div`
+  display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   &:hover {
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
   }
-
 
   &:hover .value {
     font-size: 14px;
-    font-weight:400;
+    font-weight: 400;
   }
 
   &:hover .trendvalue {
     font-size: 28px;
-    font-weight:600;
-   >svg{
-    height: 28px;
-    width:600;
+    font-weight: 600;
+    > svg {
+      height: 28px;
+      width: 600;
     }
   }
-`
+`;
+export const StyledTable = styled(AntdTable)`
+  ${(props) =>
+    props.darkMode &&
+    `
+    background-color: #1f1f1f !important;
+    color: #ffffff !important;
+
+    .ant-table {
+      background-color: #1f1f1f !important;
+      color: #ffffff !important;
+    }
+
+    .ant-table-thead > tr > th {
+      background-color: #2a2a2a !important;
+      color: #ffffff !important;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .ant-table-tbody > tr > td {
+      background-color: #1f1f1f !important;
+      color: #ffffff !important;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .ant-pagination {
+      background-color: #1f1f1f !important;
+      color: #ffffff !important;
+    }
+
+    .ant-checkbox-inner {
+      background-color: #333 !important;
+      border: 1px solid #666;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #1677ff !important;
+      border-color: #1677ff !important;
+    }
+
+    .ant-table-row:hover > td {
+      background-color: #2a2a2a !important;
+    }
+  `}
+`;
