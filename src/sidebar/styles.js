@@ -45,7 +45,7 @@ export const StyledTabs = styled(Tabs)`
   li {
     font-size: 14px;
     cursor: pointer;
-    color:${props=>props?.darkMode ? "white":"black"};
+    color: ${(props) => (props?.darkMode ? "white" : "black")};
   }
   ul li::marker {
     color: #e6e6e6 !important;
@@ -54,37 +54,30 @@ export const StyledTabs = styled(Tabs)`
 
 export const StyledMenu = styled(Menu)`
   border: none;
-  ${(props) =>
-    props?.darkMode &&
-    `
-  background-color:black;
-  color:white;`}
+  background: ${(props) => (props.darkMode ? "black" : "white")};
+  color: ${(props) => (props.darkMode ? "white" : "black")};
+
   .ant-menu-item,
   .ant-menu-submenu-title {
-    font-size: 14px;
+    font-size: 15px;
     padding-left: 30px !important;
     display: flex;
     align-items: center;
     height: 36px;
+    background: ${(props) => (props.darkMode ? "black" : "white")};
+    color: ${(props) => (props.darkMode ? "white" : "black")};
   }
-  .ant-menu-title-content {
-    margin: 0px;
-    ${(props) =>
-      props?.darkMode &&
-      `
-  background-color:black;
-  color:white;`}
+
+  .ant-menu-item:hover,
+  .ant-menu-item-active {
+    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
   }
+
   .ant-menu-item-selected {
-    background-color: #f3f3f3;
+    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
+    color: ${(props) => (props.darkMode ? "white" : "black")} !important;
     border-radius: 6px;
     position: relative;
-    color: black;
-       ${(props) =>
-      props?.darkMode &&
-      `
-  background-color:black;
-  color:white;`}
   }
 
   .ant-menu-item-selected::before {
@@ -95,21 +88,23 @@ export const StyledMenu = styled(Menu)`
     transform: translateY(-50%);
     width: 6px;
     height: 60%;
-    background-color: #000;
+    background-color: ${(props) => (props.darkMode ? "#c6c7f8" : "#000")};
     border-radius: 5px;
   }
 
   .ant-menu-submenu-arrow {
     left: 0;
     margin-left: 5px;
-    color: #e6e6e6;
+    color: ${(props) => (props.darkMode ? "#e6e6e6" : "#666")};
     transition: transform 0.3s ease;
     transform: rotate(-90deg) !important;
   }
+
   .ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
     transform: rotate(180deg) !important;
     margin-left: 5px;
   }
+
   .ant-menu-item-icon {
     margin-right: 12px;
   }
