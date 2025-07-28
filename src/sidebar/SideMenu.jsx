@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode, setActiveTab } from "../Redux/slice";
+import {  setActiveTab } from "../Redux/slice";
 import {
   MenuContainer,
   TabLabel,
@@ -10,7 +10,6 @@ import {
   GroupLabel,
 } from "./styles";
 import {
-  GlobalOutlined,
   ShoppingOutlined,
   FolderOutlined,
   BookOutlined,
@@ -19,34 +18,35 @@ import {
   TeamOutlined,
   FileTextOutlined,
   MessageOutlined,
+  PieChartOutlined,
 } from "@ant-design/icons";
 
 const SideMenu = () => {
     const dispatch = useDispatch();
   const [selectedKey, setSelectedKey] = useState("default");
     const darkMode = useSelector((state) => state.ui.darkMode);
-
+    const color = darkMode ? "#fff" :"#111"
   const menuItems = [
     {
       type: "group",
       label: <GroupLabel>Dashboards</GroupLabel>,
       children: [
-        { key: "default", icon: <GlobalOutlined />, label: "Default" },
+        { key: "default", icon: <PieChartOutlined style={{color:color}}/>, label: "Default" },
         {
           key: "ecommerce",
-          icon: <ShoppingOutlined color="red"/>,
+          icon: <ShoppingOutlined color="red" style={{color:color}}/>,
           label: "eCommerce",
           children: [{ key: "orders", label: "Order List" }],
         },
         {
           key: "projects",
-          icon: <FolderOutlined />,
+          icon: <FolderOutlined style={{color:color}}/>,
           label: "Projects",
           children: [{ key: "", label: "" }],
         },
         {
           key: "courses",
-          icon: <BookOutlined />,
+          icon: <BookOutlined style={{color:color}}/>,
           label: "Online Courses",
           children: [{ key: "", label: "" }],
         },
@@ -54,11 +54,11 @@ const SideMenu = () => {
     },
     {
       type: "group",
-      label: <GroupLabel>Pages</GroupLabel>,
+      label: <GroupLabel >Pages</GroupLabel>,
       children: [
         {
           key: "userprofile",
-          icon: <UserOutlined />,
+          icon: <UserOutlined style={{color:color}}/>,
           label: "User Profile",
           children: [
             { key: "overview", label: "Overview" },
@@ -70,25 +70,25 @@ const SideMenu = () => {
         },
         {
           key: "account",
-          icon: <IdcardOutlined />,
+          icon: <IdcardOutlined style={{color:color}}/>,
           label: "Account",
           children: [{ key: "", label: "" }],
         },
         {
           key: "corporate",
-          icon: <TeamOutlined />,
+          icon: <TeamOutlined style={{color:color}}/>,
           label: "Corporate",
           children: [{ key: "", label: "" }],
         },
         {
           key: "blog",
-          icon: <FileTextOutlined />,
+          icon: <FileTextOutlined style={{color:color}} />,
           label: "Blog",
           children: [{ key: "", label: "" }],
         },
         {
           key: "social",
-          icon: <MessageOutlined />,
+          icon: <MessageOutlined style={{color:color}}/>,
           label: "Social",
           children: [{ key: "", label: "" }],
         },
