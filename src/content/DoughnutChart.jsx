@@ -99,10 +99,10 @@ console.log(darkMode,"doughnut");
         <canvas ref={chartRef} width={125} height={125}></canvas>
       </div>
 
-      <div style={{ width: "150px", margin: "20px auto",padding:"auto" }}>
+      <div style={{ width: "150px", margin: "20px auto",padding:"auto", fontSize:"13px" }}>
         {Labels.map((data) => {
           return (
-            <Flex justifycontent= "flex-start" margin="5px 0px" >
+            <Flex justifycontent= "space-between"  >
               <Flex gap="15px">
                 <Badge color={data?.color} />
                 <div>{data?.name}</div>

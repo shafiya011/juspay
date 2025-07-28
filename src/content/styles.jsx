@@ -88,15 +88,16 @@ export const ProductTitle = styled.div`
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
+  font-size:13px;
 `;
 
 export const Th = styled.th`
   text-align: left;
-  padding: 0.75rem 0;
+  padding: 8px 0px;
   color: #6b7280;
   font-weight: 500;
   border-bottom: 1px solid #e5e7eb;
-  color: ${props=>props?.darkMode ? "#282828" : "#f7f9fb"} ;
+  color: ${props=>props?.darkMode ?  "#f7f9fb":"#282828" } ;
 `;
 
 export const Td = styled.td`
@@ -106,7 +107,7 @@ export const Td = styled.td`
 
 export const RevenueWrapper = styled.div`
   display: grid;
-  grid-template-columns: 70% 26%;
+  grid-template-columns: 72% 23%;
   grid-template-rows: auto auto;
   gap: 30px 30px;
   margin-top: 30px;
