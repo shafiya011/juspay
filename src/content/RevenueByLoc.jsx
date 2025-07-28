@@ -12,7 +12,7 @@ const RevenueByLoc = () => {
   return (
     <ChartBg darkMode={darkMode}>
       <CardTitle>Revenue By Location</CardTitle>
-      <img src={darkMode ? WorldMapDark : WorldMap} style={{ marginBottom:"10px"}} />
+      <img src={darkMode ? WorldMapDark : WorldMap} style={{ marginBottom:"10px", width:"100%"}} />
       {RevenueLocation.map((data) => {
         return (
           <div>

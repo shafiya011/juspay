@@ -19,8 +19,8 @@ const Header = () => {
   return (
     <HeaderContainer id="header_container">
       <Container>
-        <MenuIcon  darkMode={darkMode} />
-        <StarIcon  darkMode={darkMode}/>
+        <MenuIcon darkMode={darkMode} />
+        <StarIcon darkMode={darkMode} />
         <div id="dashboard">Dashboard</div>
         <div>/</div>
         <div>Default</div>
@@ -32,13 +32,16 @@ const Header = () => {
           suffix={<CommandKeyIcon />}
           placeholder="Search"
         />
-        <div style={{ cursor: "pointer" }} onClick={() => dispatch(setDarkMode())}>
-         {darkMode ? <MoonIcon/> : <SunIcon />} 
+        <div
+          style={{ cursor: "pointer", display:"flex", alignItems:"center"}}
+          onClick={() => dispatch(setDarkMode())}
+        >
+          {darkMode ? <MoonIcon /> : <SunIcon />}
         </div>
-        <HistoryIcon darkMode={darkMode}/>
-        <NotificationIcon darkMode={darkMode}/>
+        <HistoryIcon darkMode={darkMode} />
+        <NotificationIcon darkMode={darkMode} />
 
-        <MenuIcon darkMode={darkMode}/>
+        <MenuIcon darkMode={darkMode} />
       </Container>
     </HeaderContainer>
   );

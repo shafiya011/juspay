@@ -4,9 +4,9 @@ const MenuIcon = ({darkMode}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="24px"
+      height="20px"
       viewBox="0 -960 960 960"
-      width="22px"
+      width="20px"
       fill= {darkMode ?"#ffffff" :"#1f1f1f"}
     >
       <g transform="scale(-1,1) translate(-960,0)">
