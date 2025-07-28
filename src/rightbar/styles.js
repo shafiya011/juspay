@@ -44,7 +44,7 @@ export const SectionContainer = styled.div`
 `;
 
 export const TextContent = styled.div`
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 4px;
   overflow:hidden;
   text-overflow: ellipsis;

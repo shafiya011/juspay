@@ -1,3 +1,78 @@
+https://juspay-dashboard-proj.netlify.app/
+
+# Juspay Dashboard – React Project
+
+**Live Demo:** [https://juspay-dashboard-proj.netlify.app/]
+
+
+## 🚀 Tech Stack
+
+- **React.js**
+- **Ant Design (antd)** – UI components.
+- **Styled-components** – Scoped CSS styling.
+- **Redux Toolkit** – State management.
+- **Chart.js** – Data visualization.
+
+## 🚀 Dependancy
+- antd
+- styled-components
+- @reduxjs/toolkit
+- react-redux
+- chart.js
+
+## ✅ Features
+
+- **Responsive Layout** (Sidebar + Main Content)
+- **Dynamic Order List Table**:
+  - Search by **ID** or **User Name**
+  - Row selection
+  - Custom hover effects
+- **Dark Mode Toggle**:
+  - Managed using Redux
+  - Theme-aware UI styling
+- **Navigation Menu**:
+  - Styled Ant Design menu
+  - Icons (PNG fallback where exact match unavailable)
+- **Charts Integration**:
+  - Doughnut chart with custom labels
+  - Mock data placeholders
+
+🔍 Challenges Faced
+**Doughnut Chart Curved Segment**
+
+Could not fully replicate the inward curved segment ends using Chart.js v4.
+Current implementation is a partial workaround.
+Accuracy varies due to mock data.
+
+**Icon Matching**
+Some Figma icons were unavailable in Ant Design or Material Icons.
+Used PNG icons as placeholders.
+
+**Real-Time Data**
+Charts rely on mock data (no API integration yet).
+Ready for live data connection.
+
+## ⚙️ How to Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/<your-repo>.git
+cd juspay-dashboard
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm start
+
+# 4. Open in browser
+http://localhost:portnumber
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -61,7 +61,7 @@ export const StyledMenu = styled(Menu)`
   color:white;`}
   .ant-menu-item,
   .ant-menu-submenu-title {
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 30px !important;
     display: flex;
     align-items: center;

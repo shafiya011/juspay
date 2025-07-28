@@ -34,7 +34,7 @@ const SideMenu = () => {
         { key: "default", icon: <GlobalOutlined />, label: "Default" },
         {
           key: "ecommerce",
-          icon: <ShoppingOutlined />,
+          icon: <ShoppingOutlined color="red"/>,
           label: "eCommerce",
           children: [{ key: "orders", label: "Order List" }],
         },

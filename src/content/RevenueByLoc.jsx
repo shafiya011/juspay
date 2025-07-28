@@ -3,23 +3,29 @@ import { useSelector } from "react-redux";
 import { Flex } from "../styles";
 import { ChartBg, CardTitle } from "./styles";
 import WorldMap from "../assets/world-map-replica.png";
+import WorldMapDark from "../assets/wrld-map-dark.png";
 import { Progress } from "antd";
 import { RevenueLocation } from "../mockData";
 
 const RevenueByLoc = () => {
-    const darkMode = useSelector((state) => state.ui.darkMode);
+  const darkMode = useSelector((state) => state.ui.darkMode);
   return (
     <ChartBg darkMode={darkMode}>
       <CardTitle>Revenue By Location</CardTitle>
-      <img src={WorldMap} style={{ width: "100%" }} />
+      <img src={darkMode ? WorldMapDark : WorldMap} style={{ width: "100%" , marginBottom:"10px"}} />
       {RevenueLocation.map((data) => {
         return (
           <div>
-            <Flex justifycontent= {"space-between"}>
+            <Flex justifycontent={"space-between"}>
               <div>{data?.location}</div>
               <div>{data?.revenue}K</div>
             </Flex>
-            <Progress percent={data?.revenue} strokeColor={"#a8c5da"} showInfo={false} strokeWidth={"3px"}/>
+            <Progress
+              percent={data?.revenue}
+              strokeColor={"#a8c5da"}
+              showInfo={false}
+              strokeWidth={"3px"}
+            />
           </div>
         );
       })}

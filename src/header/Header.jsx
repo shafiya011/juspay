@@ -10,6 +10,7 @@ import NotificationIcon from "../assets/notificationIcon";
 import CommandKeyIcon from "../assets/commandKeyIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode, setActiveTab } from "../Redux/slice";
+import MoonIcon from "../assets/moonIcon";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -18,8 +19,8 @@ const Header = () => {
   return (
     <HeaderContainer id="header_container">
       <Container>
-        <MenuIcon />
-        <StarIcon />
+        <MenuIcon  darkMode={darkMode} />
+        <StarIcon  darkMode={darkMode}/>
         <div id="dashboard">Dashboard</div>
         <div>/</div>
         <div>Default</div>
@@ -32,12 +33,12 @@ const Header = () => {
           placeholder="Search"
         />
         <div style={{ cursor: "pointer" }} onClick={() => dispatch(setDarkMode())}>
-          <SunIcon />
+         {darkMode ? <MoonIcon/> : <SunIcon />} 
         </div>
-        <HistoryIcon />
-        <NotificationIcon />
+        <HistoryIcon darkMode={darkMode}/>
+        <NotificationIcon darkMode={darkMode}/>
 
-        <MenuIcon />
+        <MenuIcon darkMode={darkMode}/>
       </Container>
     </HeaderContainer>
   );

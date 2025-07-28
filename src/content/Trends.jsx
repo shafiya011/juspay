@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { TrendCard, TrendValue, CardTitle, Value,TrendWrapper } from "./styles";
-import { Flex } from "../styles";
+import { TrendCard, TrendValue, CardTitle, Value,TrendWrapper ,TrendFlex} from "./styles";
 import { TrendsData } from "../mockData";
 import UpgradeTrend from "../assets/upgradeTrend";
 import DowngradeTrend from "../assets/downgradeTrend";
@@ -21,10 +20,10 @@ const Trends = () => {
         return (
           <TrendCard key={key} color={data?.bg_color}>
             <CardTitle>{data?.title}</CardTitle>
-            <Flex justifycontent="space-between" >
+            <TrendFlex >
               <Value className="value">{data?.score}</Value>
               <TrendValue className="trendvalue">{data?.trend}{Trend}</TrendValue>
-            </Flex>
+            </TrendFlex>
           </TrendCard>
         );
       })}

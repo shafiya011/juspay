@@ -8,7 +8,7 @@ export const InsightsWrapper = styled.div`
 `;
 export const Title = styled.div`
   margin: 10px 0px 20px 0px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 `;
 export const Insights = styled.div`
@@ -25,7 +25,7 @@ export const TrendCard = styled.div`
   background-color: ${(props) => props?.color};
 `;
 export const CardTitle = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: ${props=>props?.margin || "20px"};
 `;
@@ -169,4 +169,27 @@ export const StatusWrapper = styled.div`
 `;
 export const OrderListContainer =styled.div`
   padding:30px;
+`
+export const TrendFlex=styled.div`
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  &:hover {
+    flex-direction: row-reverse; 
+  }
+
+
+  &:hover .value {
+    font-size: 14px;
+    font-weight:400;
+  }
+
+  &:hover .trendvalue {
+    font-size: 28px;
+    font-weight:600;
+   >svg{
+    height: 28px;
+    width:600;
+    }
+  }
 `
