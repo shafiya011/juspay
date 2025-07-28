@@ -100,7 +100,7 @@ const OrderList = () => {
       title: "",
       dataIndex: "actions",
       render: (_, record) =>
-        hoveredRowId === record.id ? <EllipsisOutlined /> : null,
+        hoveredRowId === record.id ? <EllipsisOutlined /> : <div style={{width:"20px"}}></div>,
     },
   ];
 
