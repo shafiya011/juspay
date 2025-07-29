@@ -49,7 +49,7 @@ export const StyledTabs = styled(Tabs)`
     font-size: 14px;
     cursor: pointer;
     color: ${(props) => (props?.darkMode ? "white" : "black")};
-    margin-bottom:5px;
+    margin-bottom: 5px;
   }
   ul li::marker {
     color: #e6e6e6 !important;
