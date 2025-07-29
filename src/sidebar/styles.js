@@ -61,26 +61,27 @@ export const StyledMenu = styled(Menu)`
   background: ${(props) => (props.darkMode ? "black" : "white")};
   color: ${(props) => (props.darkMode ? "white" : "black")};
 
+  .ant-menu-title-content{
+  margin:0px !important;
+  }
   .ant-menu-item,
   .ant-menu-submenu-title {
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 30px !important;
     display: flex;
     align-items: center;
-    height: 36px;
-    background: ${(props) => (props.darkMode ? "black" : "white")};
     color: ${(props) => (props.darkMode ? "white" : "black")};
+
+
+  }
+  .ant-menu-sub{
+    background: none !important;
   }
 
   .ant-menu-item:hover,
-  .ant-menu-item-active {
-    background: ${(props) =>
-      props.darkMode ? "#323232" : "#f3f3f3"} !important;
-  }
-
+  .ant-menu-item-active,
   .ant-menu-item-selected {
-    background: ${(props) =>
-      props.darkMode ? "#323232" : "#f3f3f3"} !important;
+    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
     color: ${(props) => (props.darkMode ? "white" : "black")} !important;
     border-radius: 6px;
     position: relative;
@@ -99,16 +100,15 @@ export const StyledMenu = styled(Menu)`
   }
 
   .ant-menu-submenu-arrow {
-    left: 0;
-    margin-left: 5px;
-    color: ${(props) => (props.darkMode ? "#e6e6e6" : "#666")};
+    margin-left: 12px;
+    color: ${(props) => (props.darkMode ? "#9a9a9a" : "#f3f3f3")};
     transition: transform 0.3s ease;
     transform: rotate(-90deg) !important;
+    left:0;
   }
 
   .ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
     transform: rotate(180deg) !important;
-    margin-left: 5px;
   }
 
   .ant-menu-item-icon {

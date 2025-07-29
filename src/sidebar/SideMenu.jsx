@@ -48,7 +48,7 @@ const SideMenu = () => {
           key: "courses",
           icon: <BookOutlined style={{color:color}}/>,
           label: "Online Courses",
-          children: [{ key: "course1", label: "" }],
+          children: [{ key: "course1", label: "mock" }],
         },
       ],
     },
