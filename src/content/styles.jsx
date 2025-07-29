@@ -285,7 +285,7 @@ export const ChartHeader = styled.div`
   }
 
   .current {
-    background-color: black;
+    background-color: ${props=>props?.darkMode ? "#8787a5":"#000"};
   }
 
   .previous {

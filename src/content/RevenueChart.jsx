@@ -33,7 +33,7 @@ const RevenueChart = () => {
       {
         label: "Current Week",
         data: [12, 8, 9, 14, 19, 20],
-        borderColor: "#000",
+        borderColor: darkMode? "#8787a5":"#2f2e2e",
         borderWidth: 3,
         fill: false,
         tension: 0.4,
@@ -93,14 +93,18 @@ const RevenueChart = () => {
           drawBorder: false,
           color: "#f0f0f0",
         },
+        border: {
+          display: false,
+        }
+        
       },
     },
   };
 
   return (
     <ChartCard darkMode={darkMode}>
-      <ChartHeader>
-        <CardTitle margin={"0px"}>Revenue</CardTitle>
+      <ChartHeader darkMode={darkMode}>
+        <CardTitle margin={"0px"} >Revenue</CardTitle>
         <div> | </div>
         <span>
           <span className="dot current" /> Current Week
