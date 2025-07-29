@@ -240,3 +240,56 @@ export const StyledTable = styled(AntdTable)`
     }
   `}
 `;
+
+export const ChartCard = styled.div`
+  background-color: #f9fbfc;
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 325px;
+  ${props=>props?.darkMode && `
+    background-color:#282828;
+  `}
+
+  canvas {
+    width: 100% !important; 
+    height: 100% !important; 
+  }
+`;
+
+export const ChartHeader = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+
+  span {
+    font-size: 14px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+  }
+
+  .current {
+    background-color: black;
+  }
+
+  .previous {
+    background-color: #b3c7ff;
+  }
+
+  .bold {
+    font-weight: 600;
+    margin-left: 4px;
+  }
+`;

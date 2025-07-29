@@ -17,7 +17,6 @@ import TopSellingProductsTable from "./TopSellingProductTable";
 import OrderList from "./OrderList";
 const DashboardContent = () => {
   const { darkMode, activeTab } = useSelector((state) => state.ui);
-  console.log("activeTab");
   
   return (
     <Container id="dashboard_contnet_container" darkMode={darkMode}>

@@ -9,7 +9,6 @@ Chart.register(ArcElement, Tooltip, DoughnutController);
 const SalesDoughnutChart = () => {
    const darkMode = useSelector((state) => state.ui.darkMode);
   const chartRef = useRef(null);
-console.log(darkMode,"doughnut");
 
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
@@ -27,9 +26,6 @@ console.log(darkMode,"doughnut");
           const thickness = (arc.outerRadius - arc.innerRadius) / 2;
           const x = arc.x;
           const y = arc.y;
-
-          // const prevArc = arcs[i === 0 ? arcs.length - 1 : i - 1];
-          // const prevColor = prevArc.options.backgroundColor;
 
           ctx.save();
           ctx.translate(x, y);
@@ -100,9 +96,9 @@ console.log(darkMode,"doughnut");
       </div>
 
       <div style={{ width: "150px", margin: "20px auto",padding:"auto", fontSize:"13px" }}>
-        {Labels.map((data) => {
+        {Labels.map((data, key) => {
           return (
-            <Flex justifycontent= "space-between"  >
+            <Flex justifycontent= "space-between"  key={key}>
               <Flex gap="15px">
                 <Badge color={data?.color} />
                 <div>{data?.name}</div>

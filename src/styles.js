@@ -3,19 +3,19 @@ export const Dashboard = styled.div`
   display: flex;
   width: 100%;
   font-family: sans-serif;
-  ${props=>props?.darkMode &&`
+  ${(props) =>
+    props?.darkMode &&
+    `
   background-color: black;
   color:white;`}
- 
 `;
 export const Flex = styled.div`
   display: flex;
   gap: ${(props) => props.gap};
-    margin: ${(props) => props.margin};
+  margin: ${(props) => props.margin};
   align-items: ${(props) => props.alignItems || "center"};
   justify-content: ${(props) => props.justifycontent || "center"};
 `;
-
 
 export const IconContainer = styled.div`
   width: 28px;

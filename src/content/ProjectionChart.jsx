@@ -83,7 +83,7 @@ const ProjectionsChart = () => {
   };
 
   return (
-    <ChartBg id='projection_chart' height="255px" projection={true} darkMode={darkMode}>
+    <ChartBg id='projection_chart' height="255px" darkMode={darkMode}>
       <CardTitle>Projections vs Actuals</CardTitle>
       <Bar data={data} options={options} />
     </ChartBg>

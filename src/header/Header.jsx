@@ -9,7 +9,7 @@ import HistoryIcon from "../assets/historyIcon";
 import NotificationIcon from "../assets/notificationIcon";
 import CommandKeyIcon from "../assets/commandKeyIcon";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode, setActiveTab } from "../Redux/slice";
+import { setDarkMode } from "../Redux/slice";
 import MoonIcon from "../assets/moonIcon";
 
 const Header = () => {

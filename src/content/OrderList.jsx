@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Table, Avatar, Space} from "antd";
+import { Avatar, Space} from "antd";
 import {
   StatusTag,
   FilterSec,

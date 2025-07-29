@@ -13,9 +13,9 @@ const RevenueByLoc = () => {
     <ChartBg darkMode={darkMode}>
       <CardTitle>Revenue By Location</CardTitle>
       <img src={darkMode ? WorldMapDark : WorldMap} style={{ marginBottom:"10px", width:"100%"}} />
-      {RevenueLocation.map((data) => {
+      {RevenueLocation.map((data , key) => {
         return (
-          <div>
+          <div key={key}>
             <Flex justifycontent={"space-between"}>
               <div style={{ fontSize: "12px"}}>{data?.location}</div>
               <div style={{ fontSize: "12px"}}>{data?.revenue}K</div>

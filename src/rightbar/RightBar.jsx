@@ -29,7 +29,7 @@ const RightBar = () => {
           <SectionContainer>
             {grouped[section]?.map((item, idx) =>
               section === "Contacts" ? (
-                <Flex alignItems="center" justifycontent="flex-start">
+                <Flex  justifycontent="flex-start" key={idx}>
                   <IconContainer>
                     <img src={item?.image} />
                   </IconContainer>
