@@ -150,7 +150,6 @@ export const AntdInput = styled(Input)`
   width: 180px;
   border-radius: 8px;
   background-color: ${(props) => (props.darkMode ? "#2a2a2a" : "#fafbfd")};
-  color: ${(props) => (props.darkMode ? "#fff" : "#000")};
   border: 1px solid ${(props) => (props.darkMode ? "#444" : "#d9d9d9")};
 
   ::placeholder {
@@ -238,6 +237,9 @@ export const StyledTable = styled(AntdTable)`
     .ant-table-row:hover > td {
       background-color: #2a2a2a !important;
     }
+    .ant-empty-description{
+      color:  #ffffff ;
+  }
   `}
 `;
 
@@ -248,13 +250,15 @@ export const ChartCard = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 325px;
-  ${props=>props?.darkMode && `
+  ${(props) =>
+    props?.darkMode &&
+    `
     background-color:#282828;
   `}
 
   canvas {
-    width: 100% !important; 
-    height: 100% !important; 
+    width: 100% !important;
+    height: 100% !important;
   }
 `;
 

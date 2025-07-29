@@ -30,7 +30,10 @@ export const ProfileSection = styled.div`
 
 export const StyledTabs = styled(Tabs)`
   .ant-tabs-nav {
-    margin: 0px 0px 12px 10px;
+    margin: 0px 0px 0px 10px;
+  }
+  .ant-tabs-nav::before {
+    border-bottom: 0px;
   }
   .ant-tabs-tab {
     font-size: 13px;
@@ -46,6 +49,7 @@ export const StyledTabs = styled(Tabs)`
     font-size: 14px;
     cursor: pointer;
     color: ${(props) => (props?.darkMode ? "white" : "black")};
+    margin-bottom:5px;
   }
   ul li::marker {
     color: #e6e6e6 !important;
@@ -70,11 +74,13 @@ export const StyledMenu = styled(Menu)`
 
   .ant-menu-item:hover,
   .ant-menu-item-active {
-    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
+    background: ${(props) =>
+      props.darkMode ? "#323232" : "#f3f3f3"} !important;
   }
 
   .ant-menu-item-selected {
-    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
+    background: ${(props) =>
+      props.darkMode ? "#323232" : "#f3f3f3"} !important;
     color: ${(props) => (props.darkMode ? "white" : "black")} !important;
     border-radius: 6px;
     position: relative;

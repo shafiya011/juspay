@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Avatar, Space} from "antd";
+import { Avatar, Space, Button } from "antd";
 import {
   StatusTag,
   FilterSec,
@@ -29,29 +29,27 @@ const statusColors = {
 const OrderList = () => {
   const [searchValue, setSearchValue] = useState("");
   const [hoveredRowId, setHoveredRowId] = useState(null);
-  // const [sortOrder, setSortOrder] = useState(null);
-      const darkMode = useSelector((state) => state.ui.darkMode);
-  
+  const [sortAsc, setSortAsc] = useState(true);
+  const [sortedOrders, setSortedOrders] = useState(Orders);
+  const darkMode = useSelector((state) => state.ui.darkMode);
 
-  const filteredOrders = Orders.filter((order) => {
+  const handleSort = () => {
+    const sorted = [...sortedOrders].sort((a, b) => {
+      const idA = parseInt(a.id.replace(/\D/g, ""), 10);
+      const idB = parseInt(b.id.replace(/\D/g, ""), 10);
+      return sortAsc ? idB - idA : idA - idB;
+    });
+    setSortedOrders(sorted);
+    setSortAsc(!sortAsc);
+  };
+
+  const filteredOrders = sortedOrders.filter((order) => {
     const search = searchValue.toLowerCase();
     return (
       order.id.toString().toLowerCase().includes(search) ||
       order.user.name.toLowerCase().includes(search)
     );
   });
-
-  // const sortedOrders = [...filteredOrders].sort((a, b) => {
-  //   const dateA = new Date(a.date);
-  //   const dateB = new Date(b.date);
-
-  //   if (sortOrder === "newest") {
-  //     return dateB - dateA;
-  //   } else if (sortOrder === "oldest") {
-  //     return dateA - dateB;
-  //   }
-  //   return 0;
-  // });
 
   const columns = [
     {
@@ -100,19 +98,9 @@ const OrderList = () => {
       title: "",
       dataIndex: "actions",
       render: (_, record) =>
-        hoveredRowId === record.id ? <EllipsisOutlined /> : <div style={{width:"20px"}}></div>,
+        hoveredRowId === record.id ? <EllipsisOutlined /> : <div style={{ width: "20px" }}></div>,
     },
   ];
-
-  // const sortMenu = (
-  //   <Menu
-  //     onClick={(e) => setSortOrder(e.key)}
-  //     items={[
-  //       { label: "Newest", key: "newest" },
-  //       { label: "Oldest", key: "oldest" },
-  //     ]}
-  //   />
-  // );
 
   return (
     <OrderListContainer darkMode={darkMode}>
@@ -120,24 +108,23 @@ const OrderList = () => {
       <FilterSec darkMode={darkMode}>
         <div>
           <AddIcon darkMode={darkMode} />
-          <FillterIcon darkMode={darkMode}/>
-          {/* <Dropdown overlay={sortMenu} trigger={["click"]}>
-            <Button icon={<SortIcon />}></Button>
-          </Dropdown> */}
-          <SortIcon darkMode={darkMode}/>
+          <FillterIcon darkMode={darkMode} />
+          <div onClick={handleSort} style={{ cursor: "pointer" }} >
+          <SortIcon darkMode={darkMode} />
+        </div>
         </div>
         <AntdInput
           allowClear
           prefix={<SearchIcon />}
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
-           darkMode={darkMode}
+          darkMode={darkMode}
         />
       </FilterSec>
 
       <StyledTable
         style={{ fontSize: "14px" }}
-         darkMode={darkMode}
+        darkMode={darkMode}
         rowKey={(record, index) => record.id + "-" + index}
         columns={columns}
         dataSource={filteredOrders}
