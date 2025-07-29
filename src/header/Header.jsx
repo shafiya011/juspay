@@ -27,6 +27,7 @@ const Header = () => {
       </Container>
       <Container>
         <Input
+        id="header_input"
           style={{ width: "200px", backgroundColor: "#f3f3f3" }}
           prefix={<SearchIcon />}
           suffix={<CommandKeyIcon />}

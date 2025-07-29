@@ -14,4 +14,7 @@ align-items:center;
 #dashboard{
     color:#9e9fa1;
 }
+#command_icon{
+    margin-inline-end:0px;
+}
 `

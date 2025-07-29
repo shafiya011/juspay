@@ -23,7 +23,6 @@ export const ProfileSection = styled.div`
     margin-right: 8px;
   }
   span {
-    font-size: 14px;
     font-weight: 500;
   }
 `;
@@ -46,10 +45,9 @@ export const StyledTabs = styled(Tabs)`
     margin: 0px;
   }
   li {
-    font-size: 14px;
     cursor: pointer;
     color: ${(props) => (props?.darkMode ? "white" : "black")};
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
   ul li::marker {
     color: #e6e6e6 !important;
@@ -61,27 +59,27 @@ export const StyledMenu = styled(Menu)`
   background: ${(props) => (props.darkMode ? "black" : "white")};
   color: ${(props) => (props.darkMode ? "white" : "black")};
 
-  .ant-menu-title-content{
-  margin:0px !important;
+  .ant-menu-title-content {
+    margin: 0px !important;
   }
   .ant-menu-item,
   .ant-menu-submenu-title {
-    font-size: 14px;
     padding-left: 30px !important;
     display: flex;
     align-items: center;
     color: ${(props) => (props.darkMode ? "white" : "black")};
-
-
+    height: 28px;
   }
-  .ant-menu-sub{
+  .ant-menu-sub {
     background: none !important;
+    margin-left: 25px;
   }
 
   .ant-menu-item:hover,
   .ant-menu-item-active,
   .ant-menu-item-selected {
-    background: ${(props) => (props.darkMode ? "#323232" : "#f3f3f3")} !important;
+    background: ${(props) =>
+      props.darkMode ? "#323232" : "#f3f3f3"} !important;
     color: ${(props) => (props.darkMode ? "white" : "black")} !important;
     border-radius: 6px;
     position: relative;
@@ -104,7 +102,7 @@ export const StyledMenu = styled(Menu)`
     color: ${(props) => (props.darkMode ? "#9a9a9a" : "#f3f3f3")};
     transition: transform 0.3s ease;
     transform: rotate(-90deg) !important;
-    left:0;
+    left: 0;
   }
 
   .ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
@@ -117,13 +115,11 @@ export const StyledMenu = styled(Menu)`
 `;
 
 export const GroupLabel = styled.div`
-  font-size: 14px;
   font-weight: 500;
   color: #b9b9b9;
   margin-top: 12px;
 `;
 
 export const TabLabel = styled.div`
-  font-size: 14px;
   color: #b9b9b9;
 `;

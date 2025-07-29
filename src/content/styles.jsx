@@ -2,13 +2,13 @@ import { Input, Table as AntdTable } from "antd";
 import { styled } from "styled-components";
 export const Container = styled.div`
   width: 100%;
+  font-size: 14px;
 `;
 export const InsightsWrapper = styled.div`
   padding: 30px;
 `;
 export const Title = styled.div`
   margin: 10px 0px 20px 0px;
-  font-size: 14px;
   font-weight: 600;
 `;
 export const Insights = styled.div`
@@ -25,7 +25,6 @@ export const TrendCard = styled.div`
   background-color: ${(props) => props?.color};
 `;
 export const CardTitle = styled.div`
-  font-size: 14px;
   font-weight: 600;
   margin-bottom: ${(props) => props?.margin || "20px"};
 `;
@@ -39,7 +38,6 @@ export const Value = styled.div`
 `}
 `;
 export const TrendValue = styled.div`
-  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 3px;
@@ -153,7 +151,7 @@ export const AntdInput = styled(Input)`
   border: 1px solid ${(props) => (props.darkMode ? "#444" : "#d9d9d9")};
 
   ::placeholder {
-    font-size: 14px;
+    font-size: 13px;
     color: ${(props) => (props.darkMode ? "#aaa" : "#999")};
   }
 `;
@@ -270,7 +268,6 @@ export const ChartHeader = styled.div`
   font-family: "Inter", sans-serif;
 
   span {
-    font-size: 14px;
     margin-right: 20px;
     display: flex;
     align-items: center;
