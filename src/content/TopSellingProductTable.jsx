@@ -7,7 +7,7 @@ const TopSellingProductsTable = () => {
   return (
     <ChartBg darkMode={darkMode}>
     <TableWrapper>
-      <ProductTitle>Top Selling Products</ProductTitle>
+      <ProductTitle>Top Reviews</ProductTitle>
       <Table>
         <thead>
           <tr>

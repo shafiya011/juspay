@@ -104,7 +104,7 @@ const RevenueChart = () => {
   return (
     <ChartCard darkMode={darkMode}>
       <ChartHeader darkMode={darkMode}>
-        <CardTitle margin={"0px"} >Revenue</CardTitle>
+        <CardTitle margin={"0px"} >Review Overview</CardTitle>
         <div> | </div>
         <span>
           <span className="dot current" /> Current Week

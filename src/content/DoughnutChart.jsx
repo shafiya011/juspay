@@ -90,7 +90,7 @@ const SalesDoughnutChart = () => {
   ];
   return (
     <ChartBg darkMode={darkMode}>
-      <CardTitle>Total Sales</CardTitle>
+      <CardTitle>Total Reviews</CardTitle>
       <div style={{ width: "125px", margin: "auto" }}>
         <canvas ref={chartRef} width={125} height={125}></canvas>
       </div>

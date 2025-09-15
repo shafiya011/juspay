@@ -11,7 +11,7 @@ const RevenueByLoc = () => {
   const darkMode = useSelector((state) => state.ui.darkMode);
   return (
     <ChartBg darkMode={darkMode}>
-      <CardTitle>Revenue By Location</CardTitle>
+      <CardTitle>Reviews By Location</CardTitle>
       <img src={darkMode ? WorldMapDark : WorldMap} style={{ marginBottom:"10px", width:"100%"}} />
       {RevenueLocation.map((data , key) => {
         return (

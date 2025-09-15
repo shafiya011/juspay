@@ -83,8 +83,8 @@ const ProjectionsChart = () => {
   };
 
   return (
-    <ChartBg id='projection_chart' height="255px" darkMode={darkMode}>
-      <CardTitle>Projections vs Actuals</CardTitle>
+    <ChartBg id='Rankoverview_chart' height="255px" darkMode={darkMode}>
+      <CardTitle>Rank Overview</CardTitle>
       <Bar data={data} options={options} />
     </ChartBg>
   );
