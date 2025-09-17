@@ -15,15 +15,16 @@ import RevenueChart from "./RevenueChart";
 import SalesDoughnutChart from "./DoughnutChart";
 import TopSellingProductsTable from "./TopSellingProductTable";
 import OrderList from "./OrderList";
+import PricingPage from "../billing";
 const DashboardContent = () => {
   const { darkMode, activeTab } = useSelector((state) => state.ui);
   
   return (
     <Container id="dashboard_contnet_container" darkMode={darkMode}>
       <Header />
-      {activeTab == "orders" ? (
-        <OrderList />
-      ) : (
+      {/* {activeTab == "billing" ? (
+        <PricingPage />
+      ) : ( */}
      
          <InsightsWrapper id="insights_wrapper"> 
         <Title>eCommerce</Title>
@@ -38,8 +39,8 @@ const DashboardContent = () => {
         <SalesDoughnutChart/>
        </RevenueWrapper>
       </InsightsWrapper>
-    
-      )}
+
+      {/* )} */}
     </Container>
   );
 };

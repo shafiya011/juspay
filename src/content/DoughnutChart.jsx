@@ -21,19 +21,19 @@ const SalesDoughnutChart = () => {
         const arcs = meta.data;
 
         arcs.forEach((arc) => {
-          const endAngle = arc.endAngle;
-          const midRadius = (arc.outerRadius + arc.innerRadius) / 2;
-          const thickness = (arc.outerRadius - arc.innerRadius) / 2;
+          // const endAngle = arc.endAngle;
+          // const midRadius = (arc.outerRadius + arc.innerRadius) / 2;
+          // const thickness = (arc.outerRadius - arc.innerRadius) / 2;
           const x = arc.x;
           const y = arc.y;
 
           ctx.save();
           ctx.translate(x, y);
-          const rotationAngle = endAngle;
-          const ex = midRadius * Math.cos(endAngle);
-          const ey = midRadius * Math.sin(endAngle);
+          // const rotationAngle = endAngle;
+          // const ex = midRadius * Math.cos(endAngle);
+          // const ey = midRadius * Math.sin(endAngle);
           ctx.beginPath();
-          ctx.arc(ex, ey, thickness, rotationAngle, rotationAngle + Math.PI);
+          // ctx.arc(ex, ey, thickness, rotationAngle, rotationAngle + Math.PI);
           ctx.fillStyle = arc.options.backgroundColor;
           ctx.fill();
           ctx.lineWidth = 5;
@@ -55,9 +55,9 @@ const SalesDoughnutChart = () => {
         datasets: [
           {
             data: data,
-            backgroundColor: ["#1f1f1f", "#b9e6c9", "#a5b4fc", "#bae6fd"],
-            borderWidth: 0,
-            cutout: "65%",
+            backgroundColor: ["#453939", "#87d5a2", "#1e505a", "#93d4f7"],
+            borderWidth: 3,
+            cutout: "60%",
           },
         ],
       },

@@ -27,32 +27,6 @@ export const ProfileSection = styled.div`
   }
 `;
 
-export const StyledTabs = styled(Tabs)`
-  .ant-tabs-nav {
-    margin: 0px 0px 0px 10px;
-  }
-  .ant-tabs-nav::before {
-    border-bottom: 0px;
-  }
-  .ant-tabs-tab {
-    font-size: 13px;
-    color: #c0c0c0;
-  }
-  .ant-tabs-ink-bar {
-    display: none !important;
-  }
-  ul {
-    margin: 0px;
-  }
-  li {
-    cursor: pointer;
-    color: ${(props) => (props?.darkMode ? "white" : "black")};
-    margin-bottom: 7px;
-  }
-  ul li::marker {
-    color: #e6e6e6 !important;
-  }
-`;
 
 export const StyledMenu = styled(Menu)`
   border: none;
@@ -120,6 +94,3 @@ export const GroupLabel = styled.div`
   margin-top: 12px;
 `;
 
-export const TabLabel = styled.div`
-  color: #b9b9b9;
-`;
